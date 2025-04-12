@@ -48,7 +48,7 @@ class heartAttackTrees:
 			dtree = dtree.fit(xTrain, yTrain)
 			yPred = dtree.predict(xTest)
 			accuracy = accuracy_score(yTest, yPred)
-			print(f"Accuracy of {features[i]}: {accuracy}")
+			print(f"Accuracy of Tree {i}: {accuracy}")
 
 			#make window, and print out data tree , filled and 5 font
 			createWindow(features[i])
