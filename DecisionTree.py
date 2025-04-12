@@ -51,8 +51,8 @@ class heartAttackTrees:
 			print(f"Accuracy of Tree {i}: {accuracy}")
 
 			#make window, and print out data tree , filled and 5 font
-			createWindow(features[i])
-			tree.plot_tree(dtree, feature_names=features, filled =True, fontsize = 5)
+			createWindow(i)
+			tree.plot_tree(dtree, feature_names=features, filled =True, fontsize = 5, class_names=True)
 		#show all (features[i]) number of data forest
 		plt.show()
 	#### End of findNShow()
