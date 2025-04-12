@@ -12,7 +12,7 @@
 #	##### = section identifier 		     #
 #                                                    #
 #                                                    #
-###################################################-MA
+######################################################
 import pandas 
 from sklearn import tree
 from sklearn.model_selection import train_test_split
@@ -52,8 +52,10 @@ class heartAttackTrees:
 
 			#make window, and print out data tree , filled and 5 font
 			createWindow(i)
+
 			tree.plot_tree(dtree, feature_names=features, filled =True, fontsize = 5, class_names=True)
 		#show all (features[i]) number of data forest
+		#display out all random forsest to compare 
 		plt.show()
 	#### End of findNShow()
 				#########End Of Functions in Class#########
