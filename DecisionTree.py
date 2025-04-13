@@ -52,7 +52,7 @@ class heartAttackTrees:
 			x = dataHold[features]
 			y = dataHold[target]
 			#train our model on the data above
-			xTrain, xTest, yTrain, yTest = train_test_split(x.values, y, test_size=.2175, random_state=36)
+			xTrain, xTest, yTrain, yTest = train_test_split(x.values, y, shuffle =True, test_size=.4, random_state=31,train_size=.6)
 			#making our classifier, making a tree based on the trained data, print out accuracy
 			dtree = DecisionTreeClassifier()
 			dtree = dtree.fit(xTrain, yTrain)
@@ -63,7 +63,7 @@ class heartAttackTrees:
 
 
 			#displaying everything
-			print(f"Test Result {i+1} Age:{testAge} Sex:{testSex} Cp:{testCp} RestBpm:{testRBpm} Cholesterol:{testChol}, MaxHeartRate:{testThal} :","HA:",dtree.predict([[testAge,testSex,testCp,testRBpm,testChol,testThal]]), end=" | ")
+			print(f"Test Result {i+1} Age:{testAge} Sex:{testSex} Cp:{testCp} RestBpm:{testRBpm} Cholesterol:{testChol} MaxHeartRate:{testThal} :","HA:",dtree.predict([[testAge,testSex,testCp,testRBpm,testChol,testThal]]), end=" | ")
 			print(f"Accuracy: {accuracy}\n")
 
 			#make window, and print out data tree , filled and 5 font
@@ -73,7 +73,7 @@ class heartAttackTrees:
 		#show all (features[i]) number of data forest
 		#display out all random forsest to compare 
 		print("Overall accuracy of all Trees:",overAllSum/len(features))
-		plt.show()
+		#plt.show()
 	#### End of findNShow()
 				#########End Of Functions in Class#########
 	##### Run Sequence #####		
