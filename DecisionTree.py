@@ -73,7 +73,7 @@ class heartAttackTrees:
 		#show all (features[i]) number of data forest
 		#display out all random forsest to compare 
 		print("Overall accuracy of all Trees:",overAllSum/len(features))
-		#plt.show()
+		plt.show()
 	#### End of findNShow()
 				#########End Of Functions in Class#########
 	##### Run Sequence #####		
